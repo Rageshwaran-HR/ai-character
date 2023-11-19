@@ -11,13 +11,11 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import { useProModal } from "@/hooks/use-pro-modal";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/components/ui/use-toast";
 
 export const ProModal = () => {
-  const proModal = useProModal();
   const [isMounted, setIsMounted] = useState(false);
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
@@ -48,7 +46,7 @@ export const ProModal = () => {
   }
 
   return (
-    <Dialog open={proModal.isOpen} onOpenChange={proModal.onClose}>
+    <Dialog >
       <DialogContent>
         <DialogHeader className="space-y-4">
           <DialogTitle className="text-center">
