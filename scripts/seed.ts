@@ -1,7 +1,7 @@
+import { withAccelerate } from '@prisma/extension-accelerate'
+
 const { PrismaClient } = require('@prisma/client');
-
-const db = new PrismaClient();
-
+const db = new PrismaClient().$extends(withAccelerate());
 async function main() {
   try {
     await db.category.createMany({
