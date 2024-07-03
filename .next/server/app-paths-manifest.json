@@ -1,0 +1,11 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/chat/[chatId]/route": "app/api/chat/[chatId]/route.js",
+  "/api/companion/[companionId]/route": "app/api/companion/[companionId]/route.js",
+  "/api/companion/route": "app/api/companion/route.js",
+  "/(auth)/(routes)/sign-up/[[...sign-up]]/page": "app/(auth)/(routes)/sign-up/[[...sign-up]]/page.js",
+  "/(root)/(routes)/campanion/[companionId]/page": "app/(root)/(routes)/campanion/[companionId]/page.js",
+  "/(root)/(routes)/page": "app/(root)/(routes)/page.js",
+  "/(auth)/(routes)/sign-in/[[...sign-in]]/page": "app/(auth)/(routes)/sign-in/[[...sign-in]]/page.js",
+  "/(chat)/(routes)/chat/[chatId]/page": "app/(chat)/(routes)/chat/[chatId]/page.js"
+}
