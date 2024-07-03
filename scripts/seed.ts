@@ -1,6 +1,8 @@
 import { withAccelerate } from '@prisma/extension-accelerate'
+import dotenv from 'dotenv';
+dotenv.config();
 
-const { PrismaClient } = require('@prisma/client');
+import { PrismaClient } from '@prisma/client';
 const db = new PrismaClient().$extends(withAccelerate());
 async function main() {
   try {

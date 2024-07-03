@@ -1,13 +1,13 @@
 {
   "name": "ai-companion",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "prisma:generate": "prisma generate --no-engine"
   },
   "dependencies": {
     "@clerk/nextjs": "^4.27.1",
@@ -32,13 +32,13 @@
     "axios": "^1.6.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
-    "dotenv": "^16.3.1",
+    "dotenv": "^16.4.5",
     "drizzle-orm": "^0.29.3",
     "framer-motion": "^10.16.5",
     "langchain": "^0.0.187",
     "lucide-react": "^0.291.0",
     "mongodb": "^5.9.2",
-    "next": "14.0.1",
+    "next": "^14.2.4",
     "next-cloudinary": "^5.3.0",
     "next-themes": "^0.2.1",
     "openai": "^4.17.5",
@@ -65,7 +65,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.0.1",
     "postcss": "^8",
-    "prisma": "^5.7.1",
+    "prisma": "^5.16.1",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }

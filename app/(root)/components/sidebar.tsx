@@ -17,7 +17,7 @@ export const Sidebar = ({
 
   const onNavigate = (url: string, pro: boolean) => {
     if (pro && !isPro) {
-      return 
+      return;
     }
 
     return router.push(url);
@@ -57,8 +57,8 @@ export const Sidebar = ({
                 pathname === route.href && "bg-primary/10 text-primary",
               )}
             >
-              <div className="flex flex-col gap-y-2 items-center flex-1">
-                <route.icon className="h-5 w-5 color" />
+              <div className="flex flex-col gap-y-2 items-center flex-1 ">
+              <route.icon className="h-5 w-5" />
                 {route.label}
               </div>
             </div>
