@@ -4,8 +4,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { CldUploadButton } from "next-cloudinary";
 
-import { Button } from "@/components/ui/button";
-import { ImageIcon, X } from "lucide-react";
+import { Button } from "@/components/ui/button"; // Import other components if needed
+import { ImageIcon, X } from "lucide-react"; // Example imports, adjust as needed
 
 interface ImageUploadProps {
   value: string;
@@ -21,16 +21,15 @@ export const ImageUpload = ({
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
+    setIsMounted(true); // Set isMounted to true when component mounts
   }, []);
 
   if (!isMounted) {
-    return false;
+    return null; // Return null if component is not yet mounted
   }
 
   return (
     <div className="space-y-4 w-full flex flex-col justify-center items-center">
-      
       <CldUploadButton options={{ maxFiles: 1 }} onUpload={(result: any) => onChange(result.info.secure_url)} uploadPreset="tlek37fp">
         <div 
           className="
@@ -52,7 +51,7 @@ export const ImageUpload = ({
             <Image
               fill
               alt="Upload"
-              src={value || "/placeholder.svg"}
+              src={value || "/placeholder.svg"} // Display the uploaded image or placeholder if no value
               className="rounded-lg object-cover"
             />
           </div>
